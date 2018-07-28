@@ -6,8 +6,8 @@ public class Movement : MonoBehaviour {
 
     public float moveSpeed;
     public float rotationSpeed;
-    public string playerControlForwardBackwards;
     public string playerControlLeftRight;
+    public string playerControlForwardBackwards;
     public Rigidbody Submarine;
 
 	// Use this for initialization
@@ -17,16 +17,16 @@ public class Movement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.Rotate(0, 0, -rotationSpeed * Input.GetAxis(playerControlForwardBackwards) * Time.deltaTime, Space.Self);
+        transform.Rotate(0, rotationSpeed * Input.GetAxis(playerControlLeftRight) * Time.deltaTime, 0, Space.Self);
     }
 
     private void FixedUpdate()
     {
-        Move(moveSpeed * Input.GetAxis(playerControlLeftRight));
+        Move(moveSpeed * Input.GetAxis(playerControlForwardBackwards));
     }
 
     public void Move(float speed) {
-        Submarine.velocity = (Vector3.up * Submarine.velocity.y) + (transform.up * speed);
+        Submarine.velocity = (Vector3.forward * Submarine.velocity.y) + (transform.forward * speed);
     }
 
 }
