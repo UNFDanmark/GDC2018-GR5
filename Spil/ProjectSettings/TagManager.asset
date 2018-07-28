@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Radar
+  - Player1
+  - Player2
+  - Torpedo
+  - water1
+  - water 2
   layers:
   - Default
   - TransparentFX
@@ -14,11 +20,11 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Submarine1
+  - Submarine2
+  - water1
+  - water2
+  - Radar
   - 
   - 
   - 

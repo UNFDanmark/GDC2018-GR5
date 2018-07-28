@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shooting : MonoBehaviour {
+public class Shooting2 : MonoBehaviour
+{
 
     public float missileSpeed;
     public float reloadTime = 2;
@@ -11,18 +12,20 @@ public class Shooting : MonoBehaviour {
     public GameObject missilePrefab;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         timeOfLastShot = -reloadTime;
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     private void FixedUpdate()
     {
-        if (Input.GetKeyDown("f") && Time.time - timeOfLastShot >= reloadTime)
+        if (Input.GetKeyDown("[0]") && Time.time - timeOfLastShot >= reloadTime)
         {
             Shoot();
         }
@@ -38,3 +41,4 @@ public class Shooting : MonoBehaviour {
 
 
 }
+
