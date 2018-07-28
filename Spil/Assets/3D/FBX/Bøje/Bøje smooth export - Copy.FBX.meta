@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 9a3597c6b38d95f438ce3308daea470a
-=======
-guid: 19c800e338f595a4eb86c11c25059c7c
->>>>>>> 4a9b92f9421601cf4078b0886868c7b0ad3aa735
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -20,6 +16,7 @@ ModelImporter:
     3300002: Sphere001
     4300000: Sphere001
     4300002: Box001
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -72,7 +69,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -97,7 +94,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
