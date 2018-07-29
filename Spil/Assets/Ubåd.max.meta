@@ -1,22 +1,39 @@
 fileFormatVersion: 2
-guid: 126b4b9547b2ccd44becf39e58fa039c
+guid: 2fb2b8fae76bc41418283c4c981a49ff
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Box001
-    100002: //RootNode
-    100004: Sphere001
-    400000: Box001
-    400002: //RootNode
-    400004: Sphere001
-    2100000: No Name
-    2300000: Box001
-    2300002: Sphere001
-    3300000: Box001
-    3300002: Sphere001
-    4300000: Sphere001
-    4300002: Box001
+    100000: Bone001
+    100002: Bone002
+    100004: bund
+    100006: Cylinder001
+    100008: Plane001
+    100010: SunPositioner001
+    100012: "T\xE5rn"
+    100014: //RootNode
+    400000: Bone001
+    400002: Bone002
+    400004: bund
+    400006: Cylinder001
+    400008: Plane001
+    400010: SunPositioner001
+    400012: "T\xE5rn"
+    400014: //RootNode
+    2100000: 'Material #3'
+    2100002: No Name
+    2300000: bund
+    2300002: Plane001
+    2300004: "T\xE5rn"
+    3300000: bund
+    3300002: Plane001
+    3300004: "T\xE5rn"
+    4300000: Plane001
+    4300002: bund
+    4300004: "T\xE5rn"
+    4300006: Cylinder001
+    7400000: Take 001
     9500000: //RootNode
+    13700000: Cylinder001
   externalObjects: {}
   materials:
     importMaterials: 1
