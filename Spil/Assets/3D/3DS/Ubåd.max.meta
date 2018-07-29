@@ -1,23 +1,34 @@
 fileFormatVersion: 2
-guid: b16598298db3955489c633fe8e699c27
+guid: 95dafbff352cf654886ce36cae0cdba6
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Box001
-    100002: //RootNode
-    100004: Sphere001
-    400000: Box001
-    400002: //RootNode
-    400004: Sphere001
-    2100000: No Name
-    2300000: Box001
-    2300002: Sphere001
-    3300000: Box001
-    3300002: Sphere001
-    4300000: Sphere001
-    4300002: Box001
-    9500000: //RootNode
-    2186277476908879412: ImportLogs
+    100000: bund
+    100002: Cylinder001
+    100004: Plane001
+    100006: SunPositioner001
+    100008: "T\xE5rn"
+    100010: //RootNode
+    400000: bund
+    400002: Cylinder001
+    400004: Plane001
+    400006: SunPositioner001
+    400008: "T\xE5rn"
+    400010: //RootNode
+    2100000: 'Material #3'
+    2100002: No Name
+    2300000: bund
+    2300002: Cylinder001
+    2300004: Plane001
+    2300006: "T\xE5rn"
+    3300000: bund
+    3300002: Cylinder001
+    3300004: Plane001
+    3300006: "T\xE5rn"
+    4300000: Plane001
+    4300002: bund
+    4300004: "T\xE5rn"
+    4300006: Cylinder001
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -70,7 +81,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -95,7 +106,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
