@@ -8,13 +8,16 @@ public class Radar : MonoBehaviour {
     public float refreshTime = 2;
     public float timeOfLastScan;
     public Animator anim;
+    public Rigidbody myRigidbody;
 
-    public Rigidbody Submarine;
+    void Awake()
+    {
+        myRigidbody = GetComponent<Rigidbody>();
+    }
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         anim = GetComponent<Animator>();
-
     }
 
         // Update is called once per frame
@@ -22,13 +25,6 @@ public class Radar : MonoBehaviour {
         if (Input.GetKeyDown("g") && Time.time - timeOfLastScan >= refreshTime)
         {
             anim.SetFloat("Base", 1f);
-            /*
-            foreach (AnimationState state in anim)
-            {
-                state.speed = 0.5F;
-            }
-           
-                radarCheck();*/
         }
         else
         {
@@ -36,27 +32,11 @@ public class Radar : MonoBehaviour {
         }
     }
 
-    public void radarCheck()
+    void OnTriggerEnter(Collider trigger)
     {
-        int i = 0;
-
-        for (i = 0; i < 7; i++) {
-            transform.localScale += new Vector3(i, 0f, i);
-        }
-
-
-
-        Collider[] nearbyColliders = Physics.OverlapSphere(transform.position, radius);
-
-        foreach (Collider nearbyCollider in nearbyColliders)
+        if (trigger.CompareTag("Player2"))
         {
-            if (nearbyCollider.CompareTag("Player2"))
-            {
-                print("Enemy found!");
-            }
+            print("Enemy found!");
         }
     }
-
-
-
 }
