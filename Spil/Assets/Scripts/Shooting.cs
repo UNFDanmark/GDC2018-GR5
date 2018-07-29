@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shooting : MonoBehaviour {
+public class Shooting : MonoBehaviour
+{
 
     public float missileSpeed;
     public float reloadTime = 2;
@@ -11,12 +12,14 @@ public class Shooting : MonoBehaviour {
     public GameObject missilePrefab;
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
         timeOfLastShot = -reloadTime;
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 		
 	}
 
