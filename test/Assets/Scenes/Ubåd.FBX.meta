@@ -1,15 +1,26 @@
 fileFormatVersion: 2
-guid: 4211bf6cec9af944eaef9a72690c5006
+guid: 61f87654f6731274fbfac6aab95d08d5
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
+    100000: bund
+    100002: Cylinder001
+    100004: "T\xE5rn"
+    100006: //RootNode
+    400000: bund
+    400002: Cylinder001
+    400004: "T\xE5rn"
+    400006: //RootNode
     2100000: No Name
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Cylinder001
-    2186277476908879412: ImportLogs
+    2300000: bund
+    2300002: Cylinder001
+    2300004: "T\xE5rn"
+    3300000: bund
+    3300002: Cylinder001
+    3300004: "T\xE5rn"
+    4300000: bund
+    4300002: "T\xE5rn"
+    4300004: Cylinder001
   externalObjects: {}
   materials:
     importMaterials: 1

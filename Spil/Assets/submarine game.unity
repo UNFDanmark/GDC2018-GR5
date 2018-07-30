@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 48979192}
   - component: {fileID: 48979197}
   m_Layer: 13
-  m_Name: Cylinder (2)
+  m_Name: Sonar1
   m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -179,8 +179,7 @@ MonoBehaviour:
   radius: 10
   refreshTime: 2
   timeOfLastScan: 0
-  anim: {fileID: 768226158}
-  myRigidbody: {fileID: 0}
+  anim: {fileID: 48979192}
 --- !u!136 &48979194
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -188,7 +187,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 48979190}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -249,7 +248,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1 &134793371
 GameObject:
@@ -410,6 +409,11 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 54852940362741954, guid: 01df09f92d1e5134795cd3e166b441f3,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 116
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114274810582982468, guid: 01df09f92d1e5134795cd3e166b441f3, type: 2}
@@ -1088,7 +1092,7 @@ GameObject:
   - component: {fileID: 768226158}
   - component: {fileID: 768226159}
   m_Layer: 13
-  m_Name: Cylinder (1)
+  m_Name: Sonar2
   m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1109,7 +1113,6 @@ MonoBehaviour:
   refreshTime: 2
   timeOfLastScan: 0
   anim: {fileID: 768226158}
-  myRigidbody: {fileID: 0}
 --- !u!136 &768226154
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1117,7 +1120,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 768226152}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -1209,7 +1212,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1 &805150131
 GameObject:
@@ -1430,6 +1433,15 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 54852940362741954, guid: 01df09f92d1e5134795cd3e166b441f3,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 116
+      objectReference: {fileID: 0}
+    - target: {fileID: 1919469096491990, guid: 01df09f92d1e5134795cd3e166b441f3, type: 2}
+      propertyPath: m_TagString
+      value: Player1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01df09f92d1e5134795cd3e166b441f3, type: 2}
@@ -2001,6 +2013,22 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1999291139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1999291130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 122d71cbeb906cf43a41a3ae9f56a9ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPosition: {x: 5, y: 0.5, z: 1.6}
+  currentColor: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
+  targetColor: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 0}
+  animationSpeed: 2
+  rend: {fileID: 0}
 --- !u!1 &2088504918 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1919469096491990, guid: 01df09f92d1e5134795cd3e166b441f3,
@@ -2019,3 +2047,19 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2088504926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2088504918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 122d71cbeb906cf43a41a3ae9f56a9ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPosition: {x: -5, y: -0.5, z: 1.6}
+  currentColor: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
+  targetColor: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 0}
+  animationSpeed: 2
+  rend: {fileID: 0}
