@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 56f216b3359b93e48afba7299b9c7473
+guid: 580d87c7589d8394d9bbda56e4587e71
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -9,7 +9,6 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Torus003
-    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1

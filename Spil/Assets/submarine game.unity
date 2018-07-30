@@ -124,9 +124,9 @@ GameObject:
   - component: {fileID: 48979196}
   - component: {fileID: 48979195}
   - component: {fileID: 48979194}
-  - component: {fileID: 48979193}
   - component: {fileID: 48979192}
   - component: {fileID: 48979197}
+  - component: {fileID: 48979198}
   m_Layer: 13
   m_Name: Sonar1
   m_TagString: Player1
@@ -165,21 +165,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &48979193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 48979190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d83ac45df332af14b958bceb759fd15a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 10
-  refreshTime: 2
-  timeOfLastScan: 0
-  anim: {fileID: 48979192}
 --- !u!136 &48979194
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -250,6 +235,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &48979198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 48979190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 413a186788bd70f48bced334c7e88228, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTriggered: 0
+  animationStartTime: 0
+  animationEnd: 0
+  animatior: {fileID: 48979192}
+  timeOfContact: 0
+  rendererPlayer: {fileID: 2088504924}
+  rendererEnemy: {fileID: 0}
+  player: Player1
+  enemy: Player2
+  colorPlayer: {r: 0, g: 0, b: 0, a: 0}
+  colorEnemy: {r: 1, g: 0, b: 0, a: 0}
+  colorPlayer1: {r: 1, g: 0, b: 0, a: 0}
+  rendererPlayer1: {fileID: 2088504924}
+  colorPlayer2: {r: 0.9676024, g: 1, b: 0, a: 0}
+  rendererPlayer2: {fileID: 1999291136}
+  rendererSonar: {fileID: 48979195}
+  timeOfLastScan: 0
+  cooldown: 2
+  scanControll: g
+  enemyDetectionScript: {fileID: 768226160}
 --- !u!1 &134793371
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,7 +360,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4215937940829602, guid: 01df09f92d1e5134795cd3e166b441f3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 14.79
       objectReference: {fileID: 0}
     - target: {fileID: 4215937940829602, guid: 01df09f92d1e5134795cd3e166b441f3, type: 2}
       propertyPath: m_LocalPosition.y
@@ -960,7 +976,7 @@ Transform:
   - {fileID: 1494491289}
   - {fileID: 359929225}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &617977411
 GameObject:
@@ -1047,7 +1063,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &634797005
 GameObject:
@@ -1088,9 +1104,9 @@ GameObject:
   - component: {fileID: 768226156}
   - component: {fileID: 768226155}
   - component: {fileID: 768226154}
-  - component: {fileID: 768226153}
   - component: {fileID: 768226158}
   - component: {fileID: 768226159}
+  - component: {fileID: 768226160}
   m_Layer: 13
   m_Name: Sonar2
   m_TagString: Player2
@@ -1098,21 +1114,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &768226153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 768226152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f613e9e4f3536743a87f1bdc6359a5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 10
-  refreshTime: 2
-  timeOfLastScan: 0
-  anim: {fileID: 768226158}
 --- !u!136 &768226154
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1214,6 +1215,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &768226160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 768226152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 413a186788bd70f48bced334c7e88228, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTriggered: 0
+  animationStartTime: 0
+  animationEnd: 0
+  animatior: {fileID: 768226158}
+  timeOfContact: 0
+  rendererPlayer: {fileID: 1999291136}
+  rendererEnemy: {fileID: 0}
+  player: Player2
+  enemy: Player1
+  colorPlayer: {r: 0, g: 0, b: 0, a: 0}
+  colorEnemy: {r: 1, g: 0.9696857, b: 0, a: 0}
+  colorPlayer1: {r: 1, g: 0, b: 0, a: 0}
+  rendererPlayer1: {fileID: 2088504924}
+  colorPlayer2: {r: 0.97264934, g: 1, b: 0, a: 0}
+  rendererPlayer2: {fileID: 1999291136}
+  rendererSonar: {fileID: 768226155}
+  timeOfLastScan: 0
+  cooldown: 2
+  scanControll: '[2]'
+  enemyDetectionScript: {fileID: 48979198}
 --- !u!1 &805150131
 GameObject:
   m_ObjectHideFlags: 0
@@ -1328,7 +1360,7 @@ Transform:
   m_LocalScale: {x: 5, y: 0.25, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1050292277
 GameObject:
@@ -1372,7 +1404,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4215937940829602, guid: 01df09f92d1e5134795cd3e166b441f3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -5
+      value: -18.19
       objectReference: {fileID: 0}
     - target: {fileID: 4215937940829602, guid: 01df09f92d1e5134795cd3e166b441f3, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2000,6 +2032,11 @@ MonoBehaviour:
   Missile: {fileID: 54469569871903924, guid: 001eff9049d4196478f5052371f9fbf4, type: 2}
   missilePrefab: {fileID: 1896766788893698, guid: 001eff9049d4196478f5052371f9fbf4,
     type: 2}
+--- !u!23 &1999291136 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 23583483270337154, guid: 01df09f92d1e5134795cd3e166b441f3,
+    type: 2}
+  m_PrefabInternal: {fileID: 246360924}
 --- !u!136 &1999291138
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2024,11 +2061,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 122d71cbeb906cf43a41a3ae9f56a9ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPosition: {x: 5, y: 0.5, z: 1.6}
-  currentColor: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
-  targetColor: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 0}
+  targetPlayerColor: {r: 0, g: 0, b: 0, a: 0}
   animationSpeed: 2
-  rend: {fileID: 0}
+  targetDepth: -1
+  startTime: 0
+  playerRenderer: {fileID: 0}
+  tranform: {fileID: 0}
 --- !u!1 &2088504918 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1919469096491990, guid: 01df09f92d1e5134795cd3e166b441f3,
@@ -2047,6 +2085,11 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &2088504924 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 23583483270337154, guid: 01df09f92d1e5134795cd3e166b441f3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1312325666}
 --- !u!114 &2088504926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2058,8 +2101,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 122d71cbeb906cf43a41a3ae9f56a9ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPosition: {x: -5, y: -0.5, z: 1.6}
-  currentColor: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
-  targetColor: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 0}
+  targetPlayerColor: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 0}
   animationSpeed: 2
-  rend: {fileID: 0}
+  targetDepth: -1
+  startTime: 0
+  playerRenderer: {fileID: 0}
+  tranform: {fileID: 0}
