@@ -9,11 +9,11 @@ public class Radar2 : MonoBehaviour
     public float refreshTime = 2;
     public float timeOfLastScan;
     public Animator anim;
-    public Rigidbody myRigidbody;
+    //public Rigidbody myRigidbody;
 
     void Awake()
     {
-        myRigidbody = GetComponent<Rigidbody>();
+        //myRigidbody = GetComponent<Rigidbody>();
     }
 
     // Use this for initialization
