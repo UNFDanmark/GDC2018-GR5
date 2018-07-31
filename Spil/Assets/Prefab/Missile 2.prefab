@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23384357037726214}
   - component: {fileID: 136571547110702796}
   - component: {fileID: 54392391320245404}
-  - component: {fileID: 114554261585820386}
+  - component: {fileID: 114492813330094436}
   m_Layer: 15
   m_Name: Missile 2
   m_TagString: Torpedo
@@ -99,9 +99,9 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
---- !u!114 &114554261585820386
+--- !u!114 &114492813330094436
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1382612593626666}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65fdb36fd17c5ff49a1f593d90d107d8, type: 3}
+  m_Script: {fileID: 11500000, guid: f35f411b28921b54ca31d39c0247902f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   missileSpeed: 10
@@ -118,7 +118,7 @@ MonoBehaviour:
   explosionPower: 9001
   explosionRadius: 5
   Missile: {fileID: 54392391320245404}
-  target: Player1
+  target: player1
 --- !u!136 &136571547110702796
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -128,7 +128,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 2}

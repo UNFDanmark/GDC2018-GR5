@@ -8,7 +8,6 @@ public class Shooting2 : MonoBehaviour
     public float missileSpeed;
     public float reloadTime = 2;
     public float timeOfLastShot;
-    public Rigidbody Missile;
     public GameObject missilePrefab;
 
     // Use this for initialization
