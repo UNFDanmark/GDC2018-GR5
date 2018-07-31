@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 61df1d5f67898db4fa9b6914f87be9b5
+guid: dab88f613a7888e46b12b3b53a251f45
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -24,7 +24,6 @@ ModelImporter:
     7400000: Take 001
     9500000: //RootNode
     13700000: Sphere001
-    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
