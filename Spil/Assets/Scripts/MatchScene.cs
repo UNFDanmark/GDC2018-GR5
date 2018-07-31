@@ -16,7 +16,10 @@ public class MatchScene : MonoBehaviour {
     public Renderer     tower;
 
     public Transform    tranform;
-    
+
+    Color targetBottomColor;
+    Color targetPropellerColor;
+    Color targetTowerColor;
 
     // Use this for initialization
     void Start()
@@ -24,6 +27,9 @@ public class MatchScene : MonoBehaviour {
         playerRenderer = GetComponent<Renderer>();
         tranform = GetComponent<Transform>();
         startTime = Time.time;
+        Color targetBottomColor = new Color(bottom.material.color.r, bottom.material.color.b, bottom.material.color.g, 0);
+        Color targetPropellerColor = new Color(propeller.material.color.r, propeller.material.color.b, propeller.material.color.g, 0);
+        Color targetTowerColor = new Color(tower.material.color.r, tower.material.color.b, tower.material.color.g, 0);
     }
         
 	// Update is called once per frame
@@ -41,9 +47,16 @@ public class MatchScene : MonoBehaviour {
             if (Time.time - startTime <= 1.5)
             {
                 // Move our currentColor a step closer to the targetColor
-                bottom.material.color =         Color.Lerp(playerRenderer.material.color, targetPlayerColor, Time.time / animationSpeed * 2);
-                propeller.material.color =      Color.Lerp(playerRenderer.material.color, targetPlayerColor, Time.time / animationSpeed * 2);
-                tower.material.color =          Color.Lerp(playerRenderer.material.color, targetPlayerColor, Time.time / animationSpeed * 2);
+                bottom.material.color =         Color.Lerp(bottom.material.color, targetBottomColor, Time.time / animationSpeed * 2);
+                propeller.material.color =      Color.Lerp(propeller.material.color, targetPropellerColor, Time.time / animationSpeed * 2);
+                tower.material.color =          Color.Lerp(tower.material.color, targetTowerColor, Time.time / animationSpeed * 2);
+                // make gameobjekt meshrenderer false.
+            }
+            else
+            {
+                bottom.material.color = Color.white;
+                propeller.material.color = Color.white;
+                tower.material.color = Color.white;
             }
     }
 

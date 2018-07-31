@@ -15,7 +15,7 @@ public class Countdown : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Time.unscaledTime - startTime >= 10)
+        if (Time.unscaledTime - startTime >= 5)
         {
             Time.timeScale = 1;
             print("Time" + Time.unscaledTime + "starttime" + startTime);
