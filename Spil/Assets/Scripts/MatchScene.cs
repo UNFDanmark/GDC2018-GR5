@@ -23,22 +23,31 @@ public class MatchScene : MonoBehaviour {
         
 	// Update is called once per frame
 	void Update () {
-        // The target position is equal to the current x and z position but at another depth
-        Vector3 targetPosition = new Vector3(tranform.position.x, targetDepth, transform.position.z);
 
-        // The step size is equal to speed times frame time.
-        float steps = animationSpeed * Time.deltaTime;
+        if (Time.time - startTime >= 5) {
+            startTime = Time.time;
 
-        // Move our currentPosition a step closer to the targetPosition.
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, steps);
+            // The target position is equal to the current x and z position but at another depth
+            Vector3 targetPosition = new Vector3(tranform.position.x, targetDepth, transform.position.z);
 
-        if (Time.time - startTime <= 1.5) {
-            // Move our currentColor a step closer to the targetColor
-            playerRenderer.material.color = Color.Lerp(playerRenderer.material.color, targetPlayerColor, Time.time / animationSpeed * 2);
+            // The step size is equal to speed times frame time.
+            float steps = animationSpeed * Time.deltaTime;
+
+            // Move our currentPosition a step closer to the targetPosition.
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, steps);
+
+            if (Time.time - startTime <= 1.5)
+            {
+                // Move our currentColor a step closer to the targetColor
+                playerRenderer.material.color = Color.Lerp(playerRenderer.material.color, targetPlayerColor, Time.time / animationSpeed * 2);
+            }
+
+
         }
 
 
-        
+
+
     }
     /*
     void OnEnable()
