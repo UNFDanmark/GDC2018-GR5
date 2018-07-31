@@ -1,30 +1,24 @@
 fileFormatVersion: 2
-guid: 96faa587a6d9a0c46ae075139a9828f2
+guid: ed4d347d95e361247a974fd7802f57ea
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Bone003
-    100002: Bone004
-    100004: Bone005
-    100006: Bone006
-    100008: Bone007
-    100010: //RootNode
-    100012: COM
-    100014: COM_nubb
-    100016: Sphere001
-    100018: Bone001
-    100020: Bone002
-    400000: Bone003
-    400002: Bone004
-    400004: Bone005
-    400006: Bone006
-    400008: Bone007
-    400010: //RootNode
-    400012: COM
-    400014: COM_nubb
-    400016: Sphere001
-    400018: Bone001
-    400020: Bone002
+    100000: Bone001
+    100002: Bone002
+    100004: Bone003
+    100006: Bone004
+    100008: COM
+    100010: COM_nubb
+    100012: //RootNode
+    100014: Sphere001
+    400000: Bone001
+    400002: Bone002
+    400004: Bone003
+    400006: Bone004
+    400008: COM
+    400010: COM_nubb
+    400012: //RootNode
+    400014: Sphere001
     2100000: No Name
     4300000: Sphere001
     7400000: Take 001
