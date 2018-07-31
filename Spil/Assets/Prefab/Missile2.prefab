@@ -119,6 +119,7 @@ MonoBehaviour:
   explosionRadius: 5
   Missile: {fileID: 54469569871903924}
   target: Player2
+  winner: {fileID: 100000, guid: f1391d0e649b0724ebab586d8e983c19, type: 3}
 --- !u!136 &136849924568362746
 CapsuleCollider:
   m_ObjectHideFlags: 1
