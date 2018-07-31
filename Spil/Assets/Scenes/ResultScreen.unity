@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44658017, g: 0.49641502, b: 0.57482153, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -409,7 +409,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &380760421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -630,6 +630,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pressedButton: DiveIn
+  yellow: {fileID: 0}
+  credits: {fileID: 0}
+  controls: {fileID: 0}
 --- !u!1 &905419356
 GameObject:
   m_ObjectHideFlags: 0
@@ -1124,6 +1127,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pressedButton: Escape
+  yellow: {fileID: 0}
+  credits: {fileID: 0}
+  controls: {fileID: 0}
 --- !u!1001 &1857127930
 Prefab:
   m_ObjectHideFlags: 0
