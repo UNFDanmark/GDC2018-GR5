@@ -24,7 +24,7 @@ public class MatchScene : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (Time.time - startTime >= 5) {
+        //if (Time.time - startTime >= 5) {
             startTime = Time.time;
 
             // The target position is equal to the current x and z position but at another depth
@@ -43,7 +43,7 @@ public class MatchScene : MonoBehaviour {
             }
 
 
-        }
+        //}
 
 
 

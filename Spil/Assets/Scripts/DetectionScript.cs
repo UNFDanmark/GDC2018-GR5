@@ -11,6 +11,9 @@ public class DetectionScript : MonoBehaviour {
     
     public float            timeOfContact;
 
+    public GameObject       playerUboad;
+    public GameObject       enemyUboad;
+
     public MeshRenderer     rendererPlayer;
     public MeshRenderer     rendererEnemy;
     public string           player;
@@ -78,6 +81,7 @@ public class DetectionScript : MonoBehaviour {
         {
             print("isTriggered = false");
             rendererPlayer.material.color = new Color(colorPlayer.r, colorPlayer.g, colorPlayer.b, 0);
+            playerUboad.SetActive(false);
             isTriggered = false;
         }
         
@@ -94,6 +98,7 @@ public class DetectionScript : MonoBehaviour {
         animationStartTime = Time.time;
         rendererSonar.enabled = true;
         rendererPlayer.material.color = new Color(colorPlayer.r, colorPlayer.g, colorPlayer.b, 255);
+        playerUboad.SetActive(true);
         animatior.SetFloat("Base", 1f);
     }
 
@@ -112,6 +117,7 @@ public class DetectionScript : MonoBehaviour {
             timeOfContact = Time.time;
             enemyDetectionScript.timeOfContact = Time.time;
             rendererEnemy.material.color = new Color(colorEnemy.r, colorEnemy.g, colorEnemy.b, 255);
+            enemyUboad.SetActive(true);
             isTriggered = true;
             enemyDetectionScript.isTriggered = true;
         }
@@ -124,6 +130,7 @@ public class DetectionScript : MonoBehaviour {
         {
             print("holdAnimations");
             rendererPlayer.material.color = new Color(colorPlayer.r, colorPlayer.g, colorPlayer.b, 0);
+            playerUboad.SetActive(false);
             isTriggered = false;
         }
     }
