@@ -12,6 +12,8 @@ public class Torpedo2 : MonoBehaviour
     public float explosionRadius = 5;
     public Rigidbody Missile;
     public string target = "player1";
+    public AudioSource Hit;
+    public AudioClip Boom;
     //public GameObject winner;
 
     void Awake()
@@ -22,6 +24,7 @@ public class Torpedo2 : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        
         Missile.velocity = transform.forward * missileSpeed;
         Destroy(gameObject, lifeTime);
     }
@@ -30,11 +33,12 @@ public class Torpedo2 : MonoBehaviour
     {
         if (trigger.CompareTag(target) != trigger)
         {
+            Hit.Play();
+            DontDestroyOnLoad(gameObject);
             GameObject.FindObjectOfType<FindWinner>().winner = "Player2";
             DontDestroyOnLoad(GameObject.FindObjectOfType<FindWinner>());
-            SceneManager.LoadScene("ResultScreen");
             Destroy(trigger.gameObject);
-            Destroy(gameObject);
+            SceneManager.LoadScene("ResultScreen");
         }
     }
 

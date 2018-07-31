@@ -12,6 +12,8 @@ public class Torpedo : MonoBehaviour {
     public float explosionRadius = 5;
     public Rigidbody Missile;
     public string target = "player2";
+    public AudioSource Hit;
+    public AudioClip Boom;
     //public GameObject winner;
 
     void Awake()
@@ -30,11 +32,12 @@ public class Torpedo : MonoBehaviour {
     {
         if (trigger.CompareTag(target) != trigger)
         {
-            GameObject.FindObjectOfType<FindWinner>().winner = "Player1";
+            Hit.Play();
+            DontDestroyOnLoad(gameObject);
+            GameObject.FindObjectOfType<FindWinner>().winner = "Player2";
             DontDestroyOnLoad(GameObject.FindObjectOfType<FindWinner>());
-            SceneManager.LoadScene("ResultScreen");
             Destroy(trigger.gameObject);
-            Destroy(gameObject);
+            SceneManager.LoadScene("ResultScreen");
 
         }
     }

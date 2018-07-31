@@ -8,6 +8,8 @@ public class Shooting : MonoBehaviour
     public float missileSpeed;
     public float reloadTime = 2;
     public float timeOfLastShot;
+    public AudioSource TorpedoShot;
+    public AudioClip Launch;
     public GameObject missilePrefab;
 
     // Use this for initialization
@@ -27,6 +29,7 @@ public class Shooting : MonoBehaviour
         if (Input.GetKeyDown("f") && Time.time - timeOfLastShot >= reloadTime)
         {
             Shoot();
+            TorpedoShot.PlayOneShot(Launch);
         }
     }
 

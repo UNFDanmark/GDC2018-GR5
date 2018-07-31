@@ -80,6 +80,7 @@ public class ButtonScript : MonoBehaviour {
                 Application.Quit();
                 break;
             case "Escape":
+                SceneManager.LoadScene("MainScreen");
                 break;
             default:
                 print(pressedButton);

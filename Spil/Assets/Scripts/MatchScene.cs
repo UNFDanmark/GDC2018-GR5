@@ -5,12 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class MatchScene : MonoBehaviour {
 
-    public Color    targetPlayerColor;          // The target color of the player.
-    public float    animationSpeed;             // The Speed in units per sec.
-    public float    targetDepth;                // The target depth of the object after the animation.
-    public float startTime;
-    public Renderer playerRenderer;
-    public Transform tranform;
+    public Color        targetPlayerColor;          // The target color of the player.
+    public float        animationSpeed;             // The Speed in units per sec.
+    public float        targetDepth;                // The target depth of the object after the animation.
+    public float        startTime;
+    public Renderer     playerRenderer;
+
+    public Renderer     bottom;
+    public Renderer     propeller;
+    public Renderer     tower;
+
+    public Transform    tranform;
     
 
     // Use this for initialization
@@ -24,9 +29,6 @@ public class MatchScene : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        //if (Time.time - startTime >= 5) {
-            startTime = Time.time;
-
             // The target position is equal to the current x and z position but at another depth
             Vector3 targetPosition = new Vector3(tranform.position.x, targetDepth, transform.position.z);
 
@@ -39,35 +41,10 @@ public class MatchScene : MonoBehaviour {
             if (Time.time - startTime <= 1.5)
             {
                 // Move our currentColor a step closer to the targetColor
-                playerRenderer.material.color = Color.Lerp(playerRenderer.material.color, targetPlayerColor, Time.time / animationSpeed * 2);
+                bottom.material.color =         Color.Lerp(playerRenderer.material.color, targetPlayerColor, Time.time / animationSpeed * 2);
+                propeller.material.color =      Color.Lerp(playerRenderer.material.color, targetPlayerColor, Time.time / animationSpeed * 2);
+                tower.material.color =          Color.Lerp(playerRenderer.material.color, targetPlayerColor, Time.time / animationSpeed * 2);
             }
-
-
-        //}
-
-
-
-
     }
-    /*
-    void OnEnable()
-    {
-        // Tell our 'OnLevelFinishedLoading' function to start listening for a scene change as soon as this script is enabled.
-        SceneManager.sceneLoaded += OnLevelFinishedLoading;
-    }
-
-    void OnDisable()
-    {
-        // Tell our 'OnLevelFinishedLoading' function to stop listening for a scene change as soon as this script is disabled. Remember to always have an unsubscription for every delegate you subscribe to!
-        SceneManager.sceneLoaded -= OnLevelFinishedLoading;
-    }
-
-    void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
-    {
-        Debug.Log("Level Loaded");
-        Debug.Log(scene.name);
-        Debug.Log(mode);
-    }
-    */
 
 }

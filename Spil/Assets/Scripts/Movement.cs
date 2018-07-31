@@ -9,12 +9,10 @@ public class Movement : MonoBehaviour {
     public string playerControlLeftRight;
     public string playerControlForwardBackwards;
     public Rigidbody Submarine;
-    //public Animator anim;
 
 	// Use this for initialization
 	void Start () {
-        //anim = GetComponent<Animator>();
-        //dive();
+      
     }
 	
 	// Update is called once per frame
@@ -31,8 +29,4 @@ public class Movement : MonoBehaviour {
         Submarine.velocity = (Vector3.forward * Submarine.velocity.y) + (transform.forward * speed);
     }
 
-    //public void dive()
-    //{
-    //    anim.SetFloat("Base", 1f);
-    //}
 }

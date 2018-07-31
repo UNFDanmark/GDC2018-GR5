@@ -8,7 +8,10 @@ public class DetectionScript : MonoBehaviour {
     public float            animationStartTime;
     public float            animationEnd;
     public Animator         animatior;
-    
+
+    public AudioSource      Sonar;
+    public AudioClip        sonarSignal;
+
     public float            timeOfContact;
 
     public GameObject       playerUboad;
@@ -95,6 +98,7 @@ public class DetectionScript : MonoBehaviour {
     // Starts the scanning animation.
     void startAnimation()
     {
+        Sonar.PlayOneShot(sonarSignal);
         animationStartTime = Time.time;
         rendererSonar.enabled = true;
         rendererPlayer.material.color = new Color(colorPlayer.r, colorPlayer.g, colorPlayer.b, 255);
@@ -114,6 +118,7 @@ public class DetectionScript : MonoBehaviour {
         if (trigger.CompareTag(enemy) && !trigger.isTrigger)
         {
             print("Contact is made");
+            Sonar.PlayOneShot(sonarSignal);
             timeOfContact = Time.time;
             enemyDetectionScript.timeOfContact = Time.time;
             rendererEnemy.material.color = new Color(colorEnemy.r, colorEnemy.g, colorEnemy.b, 255);
