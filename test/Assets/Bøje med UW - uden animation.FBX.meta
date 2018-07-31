@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 96faa587a6d9a0c46ae075139a9828f2
+guid: 27540e6b87931b1409b756396b2becaa
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -12,8 +12,6 @@ ModelImporter:
     100012: COM
     100014: COM_nubb
     100016: Sphere001
-    100018: Bone001
-    100020: Bone002
     400000: Bone003
     400002: Bone004
     400004: Bone005
@@ -23,14 +21,10 @@ ModelImporter:
     400012: COM
     400014: COM_nubb
     400016: Sphere001
-    400018: Bone001
-    400020: Bone002
     2100000: No Name
     4300000: Sphere001
-    7400000: Take 001
     9500000: //RootNode
     13700000: Sphere001
-    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1

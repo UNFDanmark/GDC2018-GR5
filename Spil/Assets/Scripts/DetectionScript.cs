@@ -40,7 +40,7 @@ public class DetectionScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        switch (scanControll)
+        switch (scanControll) 
         {
             case "g":
                 if (Input.GetKeyDown(scanControll) && Time.time - timeOfLastScan >= cooldown)

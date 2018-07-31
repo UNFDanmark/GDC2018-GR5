@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Torpedo2 : MonoBehaviour
 {
-
     public float missileSpeed;
     public float cooldown;
     public float lifeTime;
@@ -12,6 +12,7 @@ public class Torpedo2 : MonoBehaviour
     public float explosionRadius = 5;
     public Rigidbody Missile;
     public string target = "player1";
+    //public GameObject winner;
 
     void Awake()
     {
@@ -29,6 +30,9 @@ public class Torpedo2 : MonoBehaviour
     {
         if (trigger.CompareTag(target) != trigger)
         {
+            GameObject.FindObjectOfType<FindWinner>().winner = "Player2";
+            DontDestroyOnLoad(GameObject.FindObjectOfType<FindWinner>());
+            SceneManager.LoadScene("ResultScreen");
             Destroy(trigger.gameObject);
             Destroy(gameObject);
         }
