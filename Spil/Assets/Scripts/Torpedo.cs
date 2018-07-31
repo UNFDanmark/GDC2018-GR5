@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Torpedo : MonoBehaviour {
 
@@ -11,6 +12,7 @@ public class Torpedo : MonoBehaviour {
     public float explosionRadius = 5;
     public Rigidbody Missile;
     public string target = "player2";
+    //public GameObject winner;
 
     void Awake()
     {
@@ -28,8 +30,12 @@ public class Torpedo : MonoBehaviour {
     {
         if (trigger.CompareTag(target) != trigger)
         {
+            GameObject.FindObjectOfType<FindWinner>().winner = "Player1";
+            DontDestroyOnLoad(GameObject.FindObjectOfType<FindWinner>());
+            SceneManager.LoadScene("ResultScreen");
             Destroy(trigger.gameObject);
             Destroy(gameObject);
+
         }
     }
 
