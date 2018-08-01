@@ -21,6 +21,9 @@ public class MatchScene : MonoBehaviour {
     Color targetPropellerColor;
     Color targetTowerColor;
 
+    public GameObject uBoat;
+    private bool hidden = false;
+
     // Use this for initialization
     void Start()
     {
@@ -52,11 +55,13 @@ public class MatchScene : MonoBehaviour {
                 tower.material.color =          Color.Lerp(tower.material.color, targetTowerColor, Time.time / animationSpeed * 2);
                 // make gameobjekt meshrenderer false.
             }
-            else
+            else if (!hidden)
             {
+                uBoat.SetActive(false);
                 bottom.material.color = Color.white;
                 propeller.material.color = Color.white;
                 tower.material.color = Color.white;
+                hidden = true;
             }
     }
 

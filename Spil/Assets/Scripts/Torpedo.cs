@@ -34,7 +34,7 @@ public class Torpedo : MonoBehaviour {
         {
             Hit.Play();
             DontDestroyOnLoad(gameObject);
-            GameObject.FindObjectOfType<FindWinner>().winner = "Player2";
+            GameObject.FindObjectOfType<FindWinner>().winner = "Player1";
             DontDestroyOnLoad(GameObject.FindObjectOfType<FindWinner>());
             Destroy(trigger.gameObject);
             SceneManager.LoadScene("ResultScreen");
